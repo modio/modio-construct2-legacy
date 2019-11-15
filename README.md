@@ -29,9 +29,9 @@ Please note that this plugin is only compatible with NW.js exported games on Win
 - Mouse
 - NWjs
 
-4) Create the following Families, add their objects, and add these 'Faily instance variables'. These families and variables determine their font size on the screen relative to window size, and CSS properties:
+4) Create the following Families, add these objects, and add these 'Family instance variables' with the following default values. These families and variables determine the UI objects' font sizes on the screen relative to window size, and CSS properties:
 
-![C2 Project Families](img/readme_families.png?raw=true "Title")
+![C2 Project Families](img/readme_families.png?raw=true "C2 Project Families")
 
 In the Hypnospace mod.io browser, we've set ModIOMature checkbox object's FontHeightPx to 8 and ExludeCSS to True. Modify as you see fit.
 
@@ -48,7 +48,7 @@ CompanyName and GameName are used to create a path on the player's computer to s
 
 If you're using the mod.io test environment, change the BaseURL to "https://api.test.mod.io/v1/", otherwise leave it as "https://api.mod.io/v1/"
 
-![C2 Project Variables](img/readme_variables.png?raw=true "Title")
+![C2 Project Variables](img/readme_variables.png?raw=true "C2 Project Variables")
 
 7) Within the 'ModIO_Download' group, in 'Event sheet 1', there is some disabled code under 'On Zip Loaded' that checks the downloaded zip file for compatibility. For Hypnospace, we have a 'config.ini' file that is required to be either in the root folder or one folder deep in the zip file. This disabled code checks to make sure that it is present and no more than one folder deep. If the config file is at the root of the zip, a folder will be created titled using the mod's mod.io ID number, then the zip unpacked inside it. Feel free to re-enable this code and alter it to check that your game's downloaded mods follow the correct formatting for your game.
 
@@ -87,3 +87,9 @@ Our aim with [mod.io](https://mod.io), is to provide an open modding API. You ar
 * [Python wrapper](https://github.com/ClementJ18/mod.io), a python wrapper for the mod.io API
 * [Rust wrapper](https://github.com/nickelc/modio-rs), rust interface for mod.io
 * And more...
+
+## Screenshots
+
+![Screenshot1](img/readme_screen1.png?raw=true "Screenshot1")
+
+![Screenshot2](img/readme_screen2.png?raw=true "Screenshot2")

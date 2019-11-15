@@ -7,117 +7,61 @@ Welcome to [mod.io](https://mod.io) Construct 2 Plugin. It allows game developer
 
 ## Thanks
 
-This plugin was created by TetroniMike for [Hypnospace Outlaw](https://hypnospace.mod.io/) and has been released open source for other game developers to use in their projects.
+This plugin was created by TetroniMike (Michael Lasch) for [Hypnospace Outlaw](https://hypnospace.mod.io/) and has been released open source for other game developers to use in their projects.
 
 <p align="center"><a href="https://store.steampowered.com/app/844590/Hypnospace_Outlaw/"><img src="https://image.mod.io/games/ca46/214/hypospace-outlaw.png" alt="Hypnospace Outlaw" width="380"></a></p>
 
-## Documentation
-
-A quick start guide is provided below.
-
-## Usage
-
-### Browse mods
-
-![Alt text](img/Readme/Browse.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-### Auth (via email)
-
-First step is to request a security code to your email.
-
-![Alt text](img/Readme/EmailRequest.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-Finish authentication by submitting the 5-digit code.
-
-![Alt text](img/Readme/EmailExchange.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-### External Auth
-
-If your game is running inside a popular distribution platform such as Steam or GOG Galaxy you can authenticate 100% seamlessly.
-
-#### Steam Auth
-
-![Alt text](img/Readme/SteamAuth.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-
-### Subscriptions
-
-Download and remove mods locally by subscribing and unsubscribing.
-
-#### Subscribe
-
-![Alt text](img/Readme/Subscribe.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-### Unsubscribe
-
-![Alt text](img/Readme/Unsubscribe.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-### Mod submission
-
-Share mods by creating a mod profile and attaching modfiles to it.
-
-#### Create a mod profile
-
-![Alt text](img/Readme/AddMod.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-#### Upload a modfile
-
-![Alt text](img/Readme/AddModfile.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-### Listeners
-
-#### Download listener
-
-![Alt text](img/Readme/DownloadListener.png?raw=true "Title")
-
-```c++
-example code here
-```
-
-#### Upload listener
-
-![Alt text](img/Readme/UploadListener.png?raw=true "Title")
-
-```c++
-example code here
-```
-
 ## Getting started
-If you are a game developer, first step is to add mod support to your Construct 2 game. Once mod support is up and running, [create your games profile](https://mod.io/games/add) on mod.io, to get an API key and access to all [functionality mod.io offers](https://apps.mod.io/guides/getting-started). Next, input your `Game ID` and `API Key` under the mod.io `Project Settings` in the Construct 2.
+Please note that this plugin is only compatible with NW.js exported games on Windows, Mac, and Linux. It might be possible to alter the source code to make it compatible with other export methods, but we will not be going in to how to do so here. 
 
-![Alt text](img/settings.png?raw=true "Title")
+1) The first step is to add mod support to your Construct 2 game. Once mod support is up and running, [create your games profile](https://mod.io/games/add) on mod.io to get an API key and access to all [functionality mod.io offers](https://apps.mod.io/guides/getting-started).
+
+2) Install the .c2addon files (json_plugin.c2addon and skymen_jszip_v1.4.c2addon) by clicking and dragging them into Construct 2. You will have to close and re-open Construct 2 to finish the installation.
+
+3) Copy all assets from the provided .capx file into your game's C2 project. Copy the events into a new Event Sheet as well. Add the following plugins to your game:
+
+- AJAX
+- Browser
+- Function
+- JSON
+- jsZip
+- Keyboard
+- Mouse
+- NWjs
+
+4) Change the following variables to match your game's information:
+
+- CompanyName
+- GameName
+- API (your mod.io API Key)
+- GameID (your mod.io game's Game ID)
+
+CompanyName and GameName are used to create a path on the player's computer to store mod files (for example: C:\Users\[user name]\CompanyName\GameName\mods). Change the code within 'On start of layout' to change where mod files are stored.
+
+If you're using the mod.io test environment, change the BaseURL to "https://api.test.mod.io/v1/", otherwise leave it as "https://api.mod.io/v1/"
+
+![C2 Project Variables](img/readme_variables.png?raw=true "Title")
+
+5) Within the 'ModIO_Download' group, in 'Event sheet 1', there is some disabled code under 'On Zip Loaded' that checks the downloaded zip file for compatibility. For Hypnospace, we have a 'config.ini' file that is required to be either in the root folder or one folder deep in the zip file. This disabled code checks to make sure that it is present and no more than one folder deep. If the config file is at the root of the zip, a folder will be created titled using the mod's mod.io ID number, then the zip unpacked inside it. Feel free to re-enable this code and alter it to check that your game's downloaded mods follow the correct formatting for your game.
+
+## Error Codes
+
+When downloading and installing a mod, the following errors can occur and show the following error codes on the download button:
+
+- Error 001* - config.ini file not found in zip, mod is not formatted properly.
+- Error 002* - config.ini file is more than 1 folder deep, mod is not formatted properly
+- Error 003 - mod install path either does not exist or could not be created
+- Error 004* - weird mod install error (config.ini found in zip but not in resulting unzipped folder contents)
+- Error 005 - Error getting download url from mod.io
+- Error 999 - Unknown error occured
+
+\*These errors only show up if you have enabled the code that checks for mod compatibility. Please change it to match your mod's unique zip file specifications.
+
+## Important Notes
+
+While this is compatible with Mac and Linux in addition to Windows, we cannot guarantee it will work as expected on those platforms. Please do your own testing as you integrate this project into yours!
+
+Subscriptions, updates, dependencies, and other features are not supported out of the box. You will have to code these yourself, if you want these features.
 
 ## Contributions Welcome
 Our Construct 2 plugin is public and open source. Game developers are welcome to utilize it directly, to add support for mods in their games, or fork it for their games customized use. Want to make changes to our plugin? Submit a pull request with your recommended changes to be reviewed.

@@ -30,6 +30,7 @@ Please note that this plugin is only compatible with NW.js exported games on Win
 - NWjs
 
 4) Create the following Families, add their objects, and add these 'Faily instance variables'. These families and variables determine their font size on the screen relative to window size, and CSS properties:
+
 ![C2 Project Families](img/readme_families.png?raw=true "Title")
 
 In the Hypnospace mod.io browser, we've set ModIOMature checkbox object's FontHeightPx to 8 and ExludeCSS to True. Modify as you see fit.

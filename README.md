@@ -18,7 +18,7 @@ Please note that this plugin is only compatible with NW.js exported games on Win
 
 2) Install the .c2addon files (json_plugin.c2addon and skymen_jszip_v1.4.c2addon) by clicking and dragging them into Construct 2. You will have to close and re-open Construct 2 to finish the installation.
 
-3) Copy all assets from the provided .capx file into your game's C2 project. Copy the events into a new Event Sheet as well. Add the following plugins to your game:
+3) Copy all assets from the provided .capx file's Layout into your game's C2 project, and arrange as you see fit. Copy the events into a new Event Sheet as well. Add the following plugins to your game:
 
 - AJAX
 - Browser

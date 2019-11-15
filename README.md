@@ -18,7 +18,7 @@ Please note that this plugin is only compatible with NW.js exported games on Win
 
 2) Install the .c2addon files (json_plugin.c2addon and skymen_jszip_v1.4.c2addon) by clicking and dragging them into Construct 2. You will have to close and re-open Construct 2 to finish the installation.
 
-3) Copy all assets from the provided .capx file's Layout into your game's C2 project, and arrange as you see fit. Copy the events into a new Event Sheet as well. Add the following plugins to your game:
+3) Copy all assets from the provided .capx file's Layout into your game's C2 project, and arrange as you see fit. Add the following plugins to your game:
 
 - AJAX
 - Browser
@@ -29,7 +29,14 @@ Please note that this plugin is only compatible with NW.js exported games on Win
 - Mouse
 - NWjs
 
-4) Change the following variables to match your game's information:
+4) Create the following Families, add their objects, and add these 'Faily instance variables'. These families and variables determine their font size on the screen relative to window size, and CSS properties:
+![C2 Project Families](img/readme_families.png?raw=true "Title")
+
+In the Hypnospace mod.io browser, we've set ModIOMature checkbox object's FontHeightPx to 8 and ExludeCSS to True. Modify as you see fit.
+
+5) Finally, copy the events into a new Event Sheet.
+
+6) Change the following variables to match your game's information:
 
 - CompanyName
 - GameName
@@ -42,7 +49,9 @@ If you're using the mod.io test environment, change the BaseURL to "https://api.
 
 ![C2 Project Variables](img/readme_variables.png?raw=true "Title")
 
-5) Within the 'ModIO_Download' group, in 'Event sheet 1', there is some disabled code under 'On Zip Loaded' that checks the downloaded zip file for compatibility. For Hypnospace, we have a 'config.ini' file that is required to be either in the root folder or one folder deep in the zip file. This disabled code checks to make sure that it is present and no more than one folder deep. If the config file is at the root of the zip, a folder will be created titled using the mod's mod.io ID number, then the zip unpacked inside it. Feel free to re-enable this code and alter it to check that your game's downloaded mods follow the correct formatting for your game.
+7) Within the 'ModIO_Download' group, in 'Event sheet 1', there is some disabled code under 'On Zip Loaded' that checks the downloaded zip file for compatibility. For Hypnospace, we have a 'config.ini' file that is required to be either in the root folder or one folder deep in the zip file. This disabled code checks to make sure that it is present and no more than one folder deep. If the config file is at the root of the zip, a folder will be created titled using the mod's mod.io ID number, then the zip unpacked inside it. Feel free to re-enable this code and alter it to check that your game's downloaded mods follow the correct formatting for your game.
+
+8) Test it and modify as you see fit!
 
 ## Error Codes
 

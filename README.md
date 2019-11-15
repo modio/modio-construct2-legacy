@@ -67,6 +67,8 @@ When downloading and installing a mod, the following errors can occur and show t
 
 \*These errors only show up if you have enabled the code that checks for mod compatibility. Please change it to match your mod's unique zip file specifications.
 
+Also, if there is an error with the AJAX plugin, which does our GET requests from the mod.io API, the error text will show up in the ModIOText text box.
+
 ## Important Notes
 
 While this is compatible with Mac and Linux in addition to Windows, we cannot guarantee it will work as expected on those platforms. Please do your own testing as you integrate this project into yours!

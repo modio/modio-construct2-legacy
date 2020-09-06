@@ -14,7 +14,7 @@ This plugin was created by TetroniMike (Michael Lasch) for [Hypnospace Outlaw](h
 ## Getting started
 Please note that this plugin is only compatible with NW.js exported games on Windows, Mac, and Linux. It might be possible to alter the source code to make it compatible with other export methods, but we will not be going in to how to do so here. 
 
-1) The first step is to add mod support to your Construct 2 game. Once mod support is up and running, [create your games profile](https://mod.io/games/add) on mod.io to get an API key and access to all [functionality mod.io offers](https://apps.mod.io/guides/getting-started).
+1) The first step is to add mod support to your Construct 2 game. Once mod support is up and running, [create your games profile](https://mod.io/games/add) on mod.io to get an API key and access to all [functionality mod.io offers](https://mod.io/blog/getting-started).
 
 2) Install the .c2addon files (json_plugin.c2addon and skymen_jszip_v1.4.c2addon) by clicking and dragging them into Construct 2. You will have to close and re-open Construct 2 to finish the installation.
 

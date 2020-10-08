@@ -6,7 +6,6 @@
 Welcome to [mod.io](https://mod.io) Construct 2 Plugin. It allows game developers to easily control the browsing and installation of mod files in their games. It provides a interface built on the Construct 2 Engine to connect to the [mod.io API](https://docs.mod.io). We have a [test environment](https://test.mod.io) available which offers developers a private sandbox to try the Construct 2 Plugin out.
 
 ## Thanks
-
 This plugin was created by TetroniMike (Michael Lasch) for [Hypnospace Outlaw](https://hypnospace.mod.io/) and has been released open source for other game developers to use in their projects.
 
 <p align="center"><a href="https://store.steampowered.com/app/844590/Hypnospace_Outlaw/"><img src="https://image.mod.io/games/ca46/214/hypospace-outlaw.png" alt="Hypnospace Outlaw" width="380"></a></p>
@@ -55,7 +54,6 @@ If you're using the mod.io test environment, change the BaseURL to "https://api.
 8) Test it and modify as you see fit!
 
 ## Error Codes
-
 When downloading and installing a mod, the following errors can occur and show the following error codes on the download button:
 
 - Error 001* - config.ini file not found in zip, mod is not formatted properly.
@@ -70,7 +68,6 @@ When downloading and installing a mod, the following errors can occur and show t
 Also, if there is an error with the AJAX plugin, which does our GET requests from the mod.io API, the error text will show up in the ModIOText text box.
 
 ## Important Notes
-
 While this is compatible with Mac and Linux in addition to Windows, we cannot guarantee it will work as expected on those platforms. Please do your own testing as you integrate this project into yours!
 
 Subscriptions, updates, dependencies, and other features are not supported out of the box. You will have to code these yourself, if you want these features.
@@ -79,16 +76,7 @@ Subscriptions, updates, dependencies, and other features are not supported out o
 Our Construct 2 plugin is public and open source. Game developers are welcome to utilize it directly, to add support for mods in their games, or fork it for their games customized use. Want to make changes to our plugin? Submit a pull request with your recommended changes to be reviewed.
 
 ## Other Repositories
-Our aim with [mod.io](https://mod.io), is to provide an open modding API. You are welcome to [view, fork and contribute to our other codebases](https://github.com/modio) in use:
-
-* [Design](https://design.mod.io) is public and open source, the repository can be [found here](https://github.com/modio/WebDesign).
-* [API documentation](https://docs.mod.io) is public and open source, the repository can be [found here](https://github.com/modio/APIDocs).
-* [Browse engine tools](https://apps.mod.io), plugins and wrappers created by the community, or [share your own](https://apps.mod.io/add).
-* [Unreal Engine 4 plugin](https://github.com/modio/UE4Plugin), easily manage the browsing and install of mods in Unreal Engine 4 games
-* [Unity Engine plugin](https://github.com/modio/UnityPlugin), easily manage the browsing and install of mods in Unity Engine games
-* [Python wrapper](https://github.com/ClementJ18/mod.io), a python wrapper for the mod.io API
-* [Rust wrapper](https://github.com/nickelc/modio-rs), rust interface for mod.io
-* And more...
+Our aim with [mod.io](https://mod.io), is to provide an [open modding API](https://docs.mod.io). You are welcome to [view, fork and contribute to our other codebases](https://github.com/modio) in use.
 
 ## Screenshots
 

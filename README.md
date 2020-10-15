@@ -1,6 +1,6 @@
 <a href="https://mod.io"><img src="https://static.mod.io/v1/images/branding/modio-color-dark.svg" alt="mod.io" width="360" align="right"/></a>
 # Construct 2 Plugin
-[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/modio/modio-Construct2/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/modio/modio-construct2/blob/master/LICENSE)
 [![Discord](https://img.shields.io/discord/389039439487434752.svg?label=Discord&logo=discord&color=7289DA&labelColor=2C2F33)](https://discord.mod.io)
 
 Welcome to [mod.io](https://mod.io) Construct 2 Plugin. It allows game developers to easily control the browsing and installation of mod files in their games. It provides a interface built on the Construct 2 Engine to connect to the [mod.io API](https://docs.mod.io). We have a [test environment](https://test.mod.io) available which offers developers a private sandbox to try the Construct 2 Plugin out.

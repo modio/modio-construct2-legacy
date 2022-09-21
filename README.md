@@ -1,3 +1,10 @@
+---
+
+## Note
+This plugin is no longer supported or maintained. For questions or integration support, please reach out to developers@mod.io.
+
+---
+
 <a href="https://mod.io"><img src="https://mod.io/images/branding/modio-logo-bluedark.svg" alt="mod.io" width="360" align="right"/></a>
 # Construct 2 Plugin
 
